@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box deco</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+        p {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .Fbox {
+            border: 5px solid black;
+            background-color: #343F50;
+        }
+        .innerBox {
+            box-sizing: border-box;
+            border-top: 3px solid #4A5568;
+            border-left: 3px solid #4A5568;
+        }
+
+        .borderbox {
+            margin-top: 50px;
+            border: 5px dashed #E3D2FC;
+            border-radius: 100px;
+        }
+        .Sbox {
+            border-radius: 100px;
+            background: linear-gradient( to right, #823DED, royalblue );
+        }
+
+        .Tbox {
+            margin-top: 50px;
+            border: 5px solid #E8E8E8;
+            border-radius: 0px 100px 100px 100px;
+            box-shadow: 5px 5px 10px #E8E8E8
+        }
+        .blackFont {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="Fbox">
+        <div class="innerBox">
+            <p>Hello✋</p>
+        </div>
+    </div>
+    <div class="borderbox">
+        <div class="Sbox">
+            <p>Hello✋</p>
+        </div>
+    </div>
+
+    <div class="Tbox">
+        <p class="blackFont">Hello✋</p>
+    </div>
+</body>
+</html>
