@@ -222,6 +222,38 @@ button {
     margin-top: 7px;
 }
 
+/* .buy-item-list {
+    border-radius: 4px;
+    background-color: var(--main-bg-color);
+    height: 106px;
+    overflow: auto;
+    border: 1px solid var(--border-color);
+}
+
+.buy-item-list::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 5px;
+}
+
+.buy-item-list::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 5px;
+
+
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+.buy-item-list::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: var(--main-bg-color);
+
+
+    padding: 15px;
+} */
+
+
+
 
 .buy-item {
     border-radius: 2px;
@@ -318,6 +350,7 @@ button {
 /*--- style left section*/
 
 /* media query */
+
 @media (max-width: 820px) {
     .container {
         gap: 0;
