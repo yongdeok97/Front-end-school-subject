@@ -1,0 +1,47 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 100px 0px;
+}
+
+.section-purple {
+    background-color: purple;
+}
+
+.section-pink {
+    background-color: pink;
+}
+
+.wrapper {
+    box-shadow: inset 0 0 10px black;
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.header {
+    box-shadow: inset 0 0 10px skyblue;
+    display: flex;
+    align-items: center;
+    /* 요소끼리는 제일 바깥에 있는 것에 마진을 준다 */
+    margin-bottom: 100px;
+}
+
+.header-main-text {
+    width: 26%;
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.header-sub-text {
+    font-size: 14px;
+    display: flex;
+    width: 500px;
+    align-items: center;
+}
+
+.section-contents {
+    box-shadow: inset 0 0 10px yellow;
+}
