@@ -1,6 +1,40 @@
-body, h1, p {
+body,
+h1,
+h2,
+p {
     margin: 0;
     padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer
+}
+
+img {
+    vertical-align: top;
+}
+
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 .section {
@@ -8,26 +42,27 @@ body, h1, p {
 }
 
 .section-purple {
-    background-color: purple;
+    background-color: #673399;
 }
 
 .section-pink {
-    background-color: pink;
+    background-color: seashell;
 }
 
 .wrapper {
-    box-shadow: inset 0 0 10px black;
+    /* box-shadow: inset 0 0 10px black; */
     width: 1080px;
     margin: 0 auto;
 }
 
 .header {
-    box-shadow: inset 0 0 10px skyblue;
     display: flex;
     align-items: center;
     /* 요소끼리는 제일 바깥에 있는 것에 마진을 준다 */
     margin-bottom: 100px;
+    color: white;
 }
+
 
 .header-main-text {
     width: 26%;
@@ -35,13 +70,196 @@ body, h1, p {
     flex-shrink: 0;
 }
 
+.header-main-text strong {
+    box-shadow: inset 0 -20px 0px orangered;
+}
+
 .header-sub-text {
     font-size: 14px;
     display: flex;
     width: 500px;
     align-items: center;
+    color: #bd8fe8;
+}
+
+.header-sub-text::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    flex-shrink: 0;
+    background-color: currentColor;
+    margin-right: 20px;
 }
 
 .section-contents {
-    box-shadow: inset 0 0 10px yellow;
+    /* ul에는 클래스를 줘야 한다. */
 }
+
+.contents-item {
+    display: flex;
+    box-shadow: inset 0 0 5px salmon;
+    margin-bottom: 24px;
+}
+
+.contents-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.contents-item:last-child {
+    margin: 0;
+}
+
+.list-contents-img {
+    position: relative;
+    width: 26%;
+    flex-shrink: 0;
+}
+
+.list-img-explain {
+    position: absolute;
+    background-color: purple;
+    opacity: 0.4;
+    inset: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.list-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list-contents-text {
+    width: 100%;
+    padding: 24px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-contents-text li {
+    position: relative;
+    padding-left: 20px;
+    margin: 7px;
+}
+
+.list-contents-text li::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    top: 25%;
+    left: -5px;
+    background-color: #bd8fe8;
+}
+
+
+/* ----------------------- */
+
+.between {
+    justify-content: space-between;
+}
+
+.header-pink {
+    width: 341px;
+    color: salmon;
+}
+
+.header-pink strong {
+    box-shadow: inset 0 -20px 0px white;
+}
+
+.header-button {
+    color: white;
+    background-color: orangered;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 4px 0px rgb(114, 45, 45);
+    font-size: 14px;
+}
+
+.header-button:active {
+    background-color: #843619;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    box-shadow: inset 0 0 5px red;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 341px;
+    height: 1fr;
+    overflow: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-img {
+    height: auto;
+    box-shadow: 0 5px 0 black;
+}
+
+.skills {
+    padding: 24px;
+}
+
+.skill-item {
+    background-color: #f1e0f8;
+    color: #673399;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+.card h2 {
+    padding: 24px;
+    padding-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card p {
+    padding: 24px;
+    padding-top: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #848080;
+}
+
+.card-foot {
+    height: 68px;
+    margin-left: 24px;
+    padding: 24px;
+    padding-left: 0;
+    border-top: 4px solid #eeeeee;
+
+    font-size: 12px;
+    font-weight: bold;
+    color: #848080;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.like-user-face {
+    width: 30px;
+    border-radius: 50px;
+    border: 5px solid white;
+    margin-left: -20px;
+}
+
+.like-user-face:not(:first-child) {}
