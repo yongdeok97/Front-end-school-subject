@@ -56,15 +56,13 @@ img {
 }
 
 .wrapper {
-    /* box-shadow: inset 0 0 10px black; */
-    width: 60%;
+    max-width: 56%;
     margin: 0 auto;
 }
 
 .header {
     display: flex;
     align-items: center;
-    /* 요소끼리는 제일 바깥에 있는 것에 마진을 준다 */
     margin-bottom: 100px;
     color: white;
 }
@@ -97,7 +95,6 @@ img {
     margin-right: 20px;
 }
 
-.section-contents {}
 
 .contents-item {
     display: flex;
@@ -147,7 +144,6 @@ img {
 
 .list-contents-text li {
     flex-shrink: 1;
-    /* flex-grow: 1; */
     position: relative;
     padding-left: 20px;
     margin: 7px;
@@ -251,20 +247,22 @@ img {
         left: -5px;
         background-color: #bd8fe8;
     }
+
     .contents-item {
         display: flex;
         flex-direction: column;
         margin-bottom: 24px;
     }
-    
+
     .contents-item:nth-child(even) {
         flex-direction: column;
     }
-    
+
     .list-contents-img {
         position: relative;
         width: 100%;
     }
+
     .list-contents-text {
         box-sizing: border-box;
     }
@@ -318,6 +316,15 @@ img {
     box-shadow: 0 5px 0 black;
 }
 
+.sold-out {
+    position: absolute;
+    background: url(./images/badge.png) no-repeat 0 0 / cover ;
+    margin: -10px;
+    width: 100px;
+    height: 100px;
+}
+
+
 .skills {
     padding: 24px;
 }
@@ -332,12 +339,18 @@ img {
 }
 
 .card h2 {
-    padding: 24px;
-    padding-top: 0;
+    height: 100px;
+    padding: 0 24px;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: auto;
+    overflow: hidden;
+    margin-bottom: 32px;
 }
+
+.card h2:hover{
+    overflow: scroll;
+}
+
 
 .card p {
     padding: 24px;
@@ -362,7 +375,6 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .like-user-face {
