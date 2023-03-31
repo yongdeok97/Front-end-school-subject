@@ -1,0 +1,385 @@
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    outline: none
+}
+
+button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer
+}
+
+img {
+    vertical-align: top;
+}
+
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.section {
+    padding: 100px 0px;
+}
+
+.section-purple {
+    background-color: #673399;
+}
+
+.section-pink {
+    background-color: seashell;
+}
+
+.wrapper {
+    max-width: 56%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    color: white;
+}
+
+
+.header-main-text {
+    width: 26%;
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.header-main-text strong {
+    box-shadow: inset 0 -20px 0px orangered;
+}
+
+.header-sub-text {
+    font-size: 14px;
+    display: flex;
+    width: 500px;
+    align-items: center;
+    color: #bd8fe8;
+}
+
+.header-sub-text::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    flex-shrink: 0;
+    background-color: currentColor;
+    margin-right: 20px;
+}
+
+
+.contents-item {
+    display: flex;
+    box-shadow: inset 0 0 5px salmon;
+    margin-bottom: 24px;
+}
+
+.contents-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.contents-item:last-child {
+    margin: 0;
+}
+
+.list-contents-img {
+    position: relative;
+    width: 26%;
+    flex-shrink: 0;
+}
+
+.list-img-explain {
+    position: absolute;
+    background-color: purple;
+    opacity: 0.4;
+    inset: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list-contents-text {
+    width: 100%;
+    padding: 24px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-contents-text li {
+    flex-shrink: 1;
+    position: relative;
+    padding-left: 20px;
+    margin: 7px;
+}
+
+.list-contents-text li::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    top: 25%;
+    left: -5px;
+    background-color: #bd8fe8;
+}
+
+
+@media (max-width: 1250px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header-main-text {
+        width: 80%;
+        font-size: 40px;
+        flex-shrink: 0;
+        margin: 0 auto;
+    }
+
+    .header-sub-text {
+        padding-top: 10px;
+        margin-top: 30px;
+        border-top: 3px solid currentColor;
+    }
+
+    .header-sub-text::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+    }
+
+    .contents-item {
+        display: flex;
+        box-shadow: inset 0 0 5px salmon;
+        margin-bottom: 24px;
+    }
+
+    .contents-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .list-contents-img {
+        position: relative;
+        width: 26%;
+    }
+
+    .list-img-explain {
+        position: absolute;
+        background-color: purple;
+        opacity: 0.4;
+        inset: 0;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list-img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .list-contents-text {
+        width: 100%;
+        padding: 24px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .list-contents-text li {
+        flex-shrink: 1;
+        position: relative;
+        padding-left: 20px;
+        margin: 7px;
+    }
+
+    .list-contents-text li::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        margin-right: 20px;
+        top: 25%;
+        left: -5px;
+        background-color: #bd8fe8;
+    }
+
+    .contents-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .contents-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .list-contents-img {
+        position: relative;
+        width: 100%;
+    }
+
+    .list-contents-text {
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+.between {
+    justify-content: space-between;
+}
+
+.header-pink {
+    width: 341px;
+    color: salmon;
+}
+
+.header-pink strong {
+    box-shadow: inset 0 -20px 0px white;
+}
+
+.header-button {
+    color: white;
+    background-color: orangered;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 4px 0px rgb(114, 45, 45);
+    font-size: 14px;
+}
+
+.header-button:active {
+    background-color: #843619;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 24px;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.shadow-bottom-img {
+    height: auto;
+    box-shadow: 0 5px 0 black;
+}
+
+.sold-out {
+    position: absolute;
+    background: url(./images/badge.png) no-repeat 0 0 / cover ;
+    margin: -10px;
+    width: 100px;
+    height: 100px;
+}
+
+
+.skills {
+    padding: 24px;
+}
+
+.skill-item {
+    display: inline-block;
+    background-color: #f1e0f8;
+    color: #673399;
+    padding: 3px;
+    border-radius: 2px;
+    margin-top: 5px;
+}
+
+.card h2 {
+    height: 100px;
+    padding: 0 24px;
+    font-size: 24px;
+    font-weight: bold;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.card h2:hover{
+    overflow: scroll;
+}
+
+
+.card p {
+    padding: 24px;
+    padding-top: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #848080;
+    margin-bottom: auto;
+
+}
+
+.card-foot {
+    height: 68px;
+    margin-left: 24px;
+    padding: 24px;
+    padding-left: 0;
+    border-top: 4px solid #eeeeee;
+    font-size: 12px;
+    font-weight: bold;
+    color: #848080;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-user-face {
+    width: 30px;
+    border-radius: 50px;
+    border: 5px solid white;
+    margin-left: -20px;
+}
